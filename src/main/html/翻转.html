@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    var numb1=93282873;
+    var len=numb1.toLocaleString().length;
+    for (var i = 1; i <= len; i++) {
+      prt = numb1 % 10;
+      numb1 = parseInt(numb1/10);
+      document.write(prt);
+      console.log(prt);
+      document.write("<br />");
+      if(numb1 == 0){
+        break;
+      }
+    }
+  </script>
+</body>
+</html>

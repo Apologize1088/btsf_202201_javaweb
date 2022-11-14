@@ -1,0 +1,105 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>点名</title>
+</head>
+<body>
+<div id="box">杰普软件基地</div>
+<span id="span">点名</span>
+</body>
+<style>
+    #box {
+        width: 30%;
+        height: 200px;
+        background-color: rgb(233, 248, 214);
+        border: 1px solid rgb(130, 216, 18);
+        font-size: 40px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 200px;
+        text-align: center;
+        margin: 25px auto;
+        border-radius: 10px;
+    }
+    span {
+        display: block;
+        width: 30%;
+        height: 44px;
+        line-height: 44px;
+        background-color: rgb(6, 158, 64);
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 18px;
+        font-family: 华文细黑;
+    }
+    span:hover {
+        background-color: rgb(4, 190, 76);
+    }
+</style>
+<script>
+    var arr = [
+        "姜涛",
+        "李欣",
+        "姚鹏飞",
+        "张雅男",
+        "付豪",
+        "张宇",
+        "云浩宇",
+        "潘雅琴",
+        "王思凝",
+        "郭婧",
+        "张浩",
+        "刘家彤",
+        "李德隆",
+        "张常振",
+        "孙文彬",
+        "张乐涵",
+        "柏彦博",
+        "姜楠",
+        "藏鑫如",
+        "赵书霆",
+        "何文博",
+        "奚玥",
+        "张羽宣",
+        "任喜春",
+        "张雅婷",
+        "闫旭",
+        "田志兴",
+        "王鑫",
+        "卓倬",
+        "李燕",
+        "陆文博",
+        "付冉",
+        "杨宇鹏",
+        "黄小晖",
+        "刘佳璐",
+        "王世杰",
+        "高旭",
+        "巩悦馨",
+        "郝嘉荣",
+        "吴鑫蕊"
+
+    ];
+    var box = document.getElementById("box");
+    var span = document.getElementById("span");
+    var intervalId;
+    span.onclick = function () {
+        var spanText = span.innerText;
+        if (spanText == "点名") {
+
+            intervalId = setInterval(function () {
+
+                var index = Math.round(Math.random() * (arr.length - 1));
+
+                box.innerText = arr[index];
+            }, 20);
+            span.innerText = "结束";
+        } else {
+            clearInterval(intervalId);
+            span.innerText = "点名";
+        }
+    }
+</script>
+</html>
